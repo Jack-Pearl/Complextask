@@ -18,6 +18,27 @@ private:
     double price;
 };
 
+class Order {
+public:
+    Order() : total(0) {}
+
+    void addProduct(const Product& product) {
+        products.push_back(product);
+        total += product.getPrice();
+    }
+
+    void displayOrder() {
+        for (const auto& product : products) {
+            std::cout << product.getName() << ": " << product.getPrice() << " UAH" << std::endl;
+        }
+        std::cout << "Total: " << total << " UAH" << std::endl;
+    }
+       
+private:
+    std::vector<Product> products;
+    double total;
+};
+
 int main() {
 
 

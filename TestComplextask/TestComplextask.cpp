@@ -15,5 +15,12 @@ namespace UnitTest1
             Assert::AreEqual(product.getName(), std::string("Cheese"));
             Assert::AreEqual(product.getPrice(), 150.50);
         }
+
+        TEST_METHOD(GetBread25_31)
+        {
+            Product product("Bread", 25.31);
+            Order order;
+            order.addProduct(product);
+        }
     };
 }
