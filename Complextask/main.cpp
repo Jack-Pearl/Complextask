@@ -33,14 +33,23 @@ public:
         }
         std::cout << "Total: " << total << " UAH" << std::endl;
     }
-       
+
 private:
     std::vector<Product> products;
     double total;
 };
 
 int main() {
+    Product product1("Cheese", 150.50);
+    Product product2("Bread", 25.31);
+    Product product3("Meat", 220.75);
 
+    Order order;
+    order.addProduct(product1);
+    order.addProduct(product2);
+    order.addProduct(product3);
+
+    order.displayOrder();
 
     return 0;
 }
